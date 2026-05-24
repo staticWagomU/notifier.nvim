@@ -279,7 +279,7 @@ function StatusModule._ensure_valid(msg: Message): boolean
   return true
 end
 
-function StatusModule.push(component: string, content: Message|string, title: string|nil)
+function StatusModule.push(component: string, content: Message|string, title?: string)
   if not StatusModule.active[component] then
     StatusModule.active[component] = {}
   end
@@ -299,7 +299,7 @@ function StatusModule.push(component: string, content: Message|string, title: st
   end
 end
 
-function StatusModule.pop(component: string, title: string|nil)
+function StatusModule.pop(component: string, title?: string)
   if not StatusModule.active[component] then return end
 
   if title then

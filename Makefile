@@ -1,5 +1,5 @@
 build:
-	tl build
+	cyan build
 
 check:
 	tl check teal/**/*.tl
@@ -11,7 +11,7 @@ test:
 	./run_tests.sh
 
 nix-build:
-	nix-shell --pure --run "tl build"
+	nix-shell --pure --run "cyan build"
 
 nix-test:
 	nix-shell --pure --run "./run_tests.sh"

@@ -9,7 +9,7 @@ end
 
 local notify_msg_cache = {}
 
-local function notify(msg: string, level: integer, opts: NotifyOptions, no_cache: boolean)
+local function notify(msg: string, level: integer, opts: NotifyOptions, no_cache?: boolean)
   level = level or vim.log.levels.INFO
   opts = opts or {}
   if level >= config.config.notify.min_level then
