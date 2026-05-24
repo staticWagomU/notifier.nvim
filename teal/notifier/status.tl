@@ -196,7 +196,7 @@ function StatusModule.redraw()
   -- For each component, print the messages
   for _, compname in ipairs(cfg.config.components) do
     local msgs = StatusModule.active[compname] or {}
-    local is_tbl = vim.tbl_islist(msgs)
+    local is_tbl = vim.islist(msgs)
 
     for name, msg in pairs(msgs) do
       -- Resolve notification name
@@ -204,7 +204,7 @@ function StatusModule.redraw()
       if not rname and is_tbl then
         rname = compname
       elseif not is_tbl then
-        rname = name as string -- This is actually a string here, as checks by tbl_islist
+        rname = name as string -- This is actually a string here, as checks by islist
       end
 
       if cfg.config.component_name_recall and not is_tbl then
