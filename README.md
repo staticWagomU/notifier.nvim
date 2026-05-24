@@ -7,7 +7,7 @@
 Using `packer.nvim`:
 ```lua
 use {
-  "vigoux/notifier.nvim",
+  "staticWagomU/notifier.nvim",
   config = function()
     require'notifier'.setup {
     -- You configuration here
@@ -57,8 +57,11 @@ icon: string -- The icon for this notification
 
 ## Acknowledgement
 
+This is a fork of [vigoux/notifier.nvim] by Thomas Vigouroux, distributed under the BSD 3-Clause License.
+
 Heavily inspired by [fidget.nvim]
 
+[vigoux/notifier.nvim]: https://github.com/vigoux/notifier.nvim
 [fidget.nvim]: https://github.com/j-hui/fidget.nvim
 
 ## TODO
